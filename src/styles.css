@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+* {
+    color: #DCE2E6;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: #37454E;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/*Blurring main part when the questions are opened*/
+main.blur, p.blur {
+    filter: blur(10px);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6FA696;
+    padding: 20px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 50px;
+    font-weight: 700;
+    border: 8px solid #DCE2E6;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 24px;
+}
+
+/*Styling the timer*/
+header .timer {
+    position: absolute;
+    right: 10px;
+    font-size: 36px;
+    font-weight: 600;
+    color: #37454E;
+    display: none;
+}
+
+p {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+/*Styling the different topics*/
+.topics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    width: 1200px;
+    margin: 50px auto;
+    height: 100%;
+}
+
+.topic {
+    width: 200px;
+    height: 230px;
+    background-color: #6FA696;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.topic:hover {
+    background-color: #E6C6D0;
+}
+
+.topic-open:hover {
+    background-color: #6FA696;
+    cursor: default;
+}
+
+.topic:hover h3 {
+    color: #37454E;
+    border-bottom: solid 5px #6FA696;
+}
+
+.topic-open:hover h3 {
+    color: #DCE2E6;
+    border-bottom: solid 5px #37454E;
+}
+
+h3 {
+    border-bottom: solid 5px #37454E;
+    padding: 5px;
+    font-weight: 400;
+}
+
+.s-modal, .h-modal, .sp-modal, .m-modal {
+    position: fixed;
+    background-color: #DCE2E6;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 620px;
+    height: 620px;
+    border-radius: 15px;
+    padding: 20px;
+    display: none;
+}
+
+.s-modal h2, .h-modal h2, .sp-modal h2, .m-modal h2 {
+    text-align: center;
+    color: #6FA696;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.question {
+    text-align: left;
+    color: #6FA696;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.answers {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.sSubmit, .hSubmit, .spSubmit, .mSubmit {
+    background-color: #6FA696;
+    width: 75px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li {
+    color: #6FA696;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+.input-container {
+    margin: 20px 0;
+}
+
+input {
+    border: none;
+    background-color: #DCE2E6;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 25%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #6FA696;
+    padding: 8px 5px;
+}
+
+.input-empty {
+    border: solid 1px red;
+}
+
+input:focus {
+    outline: none;
+}
+
+.result {
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    background-color: #37454E;
+    display: flex;
+    justify-content: center;
+    /*bottom: 20%;*/
+    left: 40%;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.result-1 {
+    position: fixed;
+    height: 150px;
+    width: 397px;
+    background-color: #6FA696;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.atom {
+    height: 120px;
+    width: 120px;
+    display: none;
+}
+
+.message, .scoreBasedMessage {
+    position: absolute;
+    bottom: 200px;
+    color: #DCE2E6;
+    z-index: 1;
+    display: none;
+}
+
+.scoreBasedMessage {
+    bottom: 160px;
+}
+
+.retake, .exit {
+    background-color: transparent;
+    border: solid 1px #3DB39E;
+    padding: 0;
+    margin: 0;
+    color: #DCE2E6;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    border-radius: 20px;
+    z-index: 1;
+    display: none;
+}
+
+.retake {
+    height: 40px;
+    width: 200px;
+    bottom: 75px;
+}
+
+.exit {
+    height: 40px;
+    width: 200px;
+    bottom: 20px;
+}
+
+.retake:hover, .exit:hover {
+    border: solid 1px #6FA696;
+    color: #3DB39E;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/styles.css">
+<!--    Project title-->
+    <title>Personalized Quiz</title>
+</head>
+<body>
+<!--    Header part of the Quiz application-->
+    <header>
+        <h1>QUIZ</h1>
+        <h4 class="timer"></h4> <!-- timer for the quiz -->
+    </header>
+    <p class="note">Please select a topic. Each topic contains 5 multiple choice questions. Good luck!</p>
+    <!-- Section for the different topics -->
+    <main class="topics">
+        <div id="science" class="topic">
+            <h3>Science</h3>
+        </div>
+        <div id="history" class="topic">
+            <h3>History</h3>
+        </div>
+        <div id="sports" class="topic">
+            <h3>Sports</h3>
+        </div>
+        <div id = "movies" class="topic">
+            <h3>Movies</h3>
+        </div>
+    </main>
+<!--    Science topic questions and choices-->
+    <div class="s-modal" id="s-modal1">
+        <span class="close">&times;</span>
+        <h2>Question 1</h2>
+        <p class="question">What is the process by which plants convert light energy into chemical energy?</p>
+        <ul class="answers">
+            <li>A) Photosynthesis</li>
+            <li>B) Respiration</li>
+            <li>C) Fermentation</li>
+            <li>D) Oxidation</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="s-answer1"></label>
+                <input type="text" id="s-answer1" class="sAnswer" name="sAnswer" required/>
+            </form>
+        </div>
+        <diV class="sSubmit">Submit</div>
+    </div>
+    <div class="s-modal" id="s-modal2">
+        <span class="close">&times;</span>
+        <h2>Question 2</h2>
+        <p class="question">What is the basic unit of life?</p>
+        <ul class="answers">
+            <li>A) Atom</li>
+            <li>B) Molecule</li>
+            <li>C) Organism</li>
+            <li>D) Cell</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="s-answer2"></label>
+                <input type="text" id="s-answer2" class="sAnswer" name="sAnswer" required/>
+            </form>
+        </div>
+        <div class="sSubmit">Submit</div>
+    </div>
+    <div class="s-modal" id="s-modal3">
+        <span class="close">&times;</span>
+        <h2>Question 3</h2>
+        <p class="question">What is the name of the force that holds atoms together in a molecule?</p>
+        <ul class="answers">
+            <li>A) Gravitational force</li>
+            <li>B) Magnetic force</li>
+            <li>C) Chemical bond</li>
+            <li>D) Electrostatic force</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="s-answer3"></label>
+                <input type="text" id="s-answer3" class="sAnswer" name="sAnswer" required/>
+            </form>
+        </div>
+        <div class="sSubmit">Submit</div>
+    </div>
+    <div class="s-modal" id="s-modal4">
+        <span class="close">&times;</span>
+        <h2>Question 4</h2>
+        <p class="question">What is the smallest particle of an element that retains its chemical properties?</p>
+        <ul class="answers">
+            <li>A) Atom</li>
+            <li>B) Electron</li>
+            <li>C) Proton</li>
+            <li>D) Molecule</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="s-answer4"></label>
+                <input type="text" id="s-answer4" class="sAnswer" name="sAnswer" required/>
+            </form>
+        </div>
+        <div class="sSubmit">Submit</div>
+    </div>
+    <div class="s-modal" id="s-modal5">
+        <span class="close">&times;</span>
+        <h2>Question 5</h2>
+        <p class="question">What is the process by which a solid changes directly into a gas without passing through the liquid phase?</p>
+        <ul class="answers">
+            <li>A) Melting</li>
+            <li>B) Sublimation</li>
+            <li>C) Evaporation</li>
+            <li>D) Condensation</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="s-answer5"></label>
+                <input type="text" id="s-answer5" class="sAnswer" name="sAnswer" required/> <!-- Answer input section -->
+            </form>
+        </div>
+        <div class="sSubmit">Submit</div>
+    </div>
+
+<!--    History topic questions-->
+    <div class="h-modal" id="h-modal1">
+        <span class="close">&times;</span>
+        <h2>Question 1</h2>
+        <p class="question">Which of these was a primary cause of World War I?</p>
+        <ul class="answers">
+            <li>A) The Russian Revolution</li>
+            <li>B) The Cuban Missile Crisis</li>
+            <li>C) The assassination of Archduke Franz Ferdinand</li>
+            <li>D) The United States' involvement in the war</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="h-answer1"></label>
+                <input type="text" id="h-answer1" class="hAnswer" name="hAnswer" required/>
+            </form>
+        </div>
+        <diV class="hSubmit">Submit</div>
+    </div>
+    <div class="h-modal" id="h-modal2">
+        <span class="close">&times;</span>
+        <h2>Question 2</h2>
+        <p class="question">Who was the first President of the United States of America?</p>
+        <ul class="answers">
+            <li>A) Benjamin Franklin</li>
+            <li>B) George Washington</li>
+            <li>C) Thomas Jefferson</li>
+            <li>D) Abraham Lincoln</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="h-answer2"></label>
+                <input type="text" id="h-answer2" class="hAnswer" name="hAnswer" required/>
+            </form>
+        </div>
+        <div class="hSubmit">Submit</div>
+    </div>
+    <div class="h-modal" id="h-modal3">
+        <span class="close">&times;</span>
+        <h2>Question 3</h2>
+        <p class="question">Which of these was a significant event during the American Civil War?</p>
+        <ul class="answers">
+            <li>A) The Boston Tea Party</li>
+            <li>B) The signing of the Emancipation Proclamation</li>
+            <li>C) The Louisiana Purchase</li>
+            <li>D) The War of 1812</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="h-answer3"></label>
+                <input type="text" id="h-answer3" class="hAnswer" name="hAnswer" required/>
+            </form>
+        </div>
+        <div class="hSubmit">Submit</div>
+    </div>
+    <div class="h-modal" id="h-modal4">
+        <span class="close">&times;</span>
+        <h2>Question 4</h2>
+        <p class="question">Who was the last pharaoh of ancient Egypt?</p>
+        <ul class="answers">
+            <li>A) Tutankhamun</li>
+            <li>B) Ramses II</li>
+            <li>C) Cleopatra VII</li>
+            <li>D) Hatshepsut</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="h-answer4"></label>
+                <input type="text" id="h-answer4" class="hAnswer" name="hAnswer" required/>
+            </form>
+        </div>
+        <div class="hSubmit">Submit</div>
+    </div>
+    <div class="h-modal" id="h-modal5">
+        <span class="close">&times;</span>
+        <h2>Question 5</h2>
+        <p class="question">What was the Cold War?</p>
+        <ul class="answers">
+            <li>A) A period of tense diplomatic relations between the United States and Soviet Union</li>
+            <li>B) A conflict between North and South Korea</li>
+            <li>C) A conflict between Iraq and Iran</li>
+            <li>D) A conflict between Israel and Palestine</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="h-answer5"></label>
+                <input type="text" id="h-answer5" class="hAnswer" name="hAnswer" required/> <!-- Answer input section -->
+            </form>
+        </div>
+        <div class="hSubmit">Submit</div>
+    </div>
+<!--    Sports topic questions-->
+    <div class="sp-modal" id="sp-modal1">
+        <span class="close">&times;</span>
+        <h2>Question 1</h2>
+        <p class="question">In what year was the first modern Olympic Games held?</p>
+        <ul class="answers">
+            <li>A) 1892</li>
+            <li>B) 1896</li>
+            <li>C) 1900</li>
+            <li>D) 1904</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="sp-answer1"></label>
+                <input type="text" id="sp-answer1" class="spAnswer" name="spAnswer" required/>
+            </form>
+        </div>
+        <diV class="spSubmit">Submit</div>
+    </div>
+    <div class="sp-modal" id="sp-modal2">
+        <span class="close">&times;</span>
+        <h2>Question 2</h2>
+        <p class="question">Who holds the record for the most career goals in football (soccer)?</p>
+        <ul class="answers">
+            <li>A) Lionel Messi</li>
+            <li>B) Cristiano Ronaldo</li>
+            <li>C) Pele</li>
+            <li>D) Diego Maradona</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="sp-answer2"></label>
+                <input type="text" id="sp-answer2" class="spAnswer" name="spAnswer" required/>
+            </form>
+        </div>
+        <div class="spSubmit">Submit</div>
+    </div>
+    <div class="sp-modal" id="sp-modal3">
+        <span class="close">&times;</span>
+        <h2>Question 3</h2>
+        <p class="question">What is the highest score a gymnast can achieve on a single apparatus at the Olympics?</p>
+        <ul class="answers">
+            <li>A) 10.0</li>
+            <li>B) 9.9</li>
+            <li>C) 9.8</li>
+            <li>D) 9.7</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="sp-answer3"></label>
+                <input type="text" id="sp-answer3" class="spAnswer" name="spAnswer" required/>
+            </form>
+        </div>
+        <div class="spSubmit">Submit</div>
+    </div>
+    <div class="sp-modal" id="sp-modal4">
+        <span class="close">&times;</span>
+        <h2>Question 4</h2>
+        <p class="question">In which year did Michael Jordan win his first NBA championship with the Chicago Bulls?</p>
+        <ul class="answers">
+            <li>A) 1989</li>
+            <li>B) 1990</li>
+            <li>C) 1991</li>
+            <li>D) 1992</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="sp-answer4"></label>
+                <input type="text" id="sp-answer4" class="spAnswer" name="spAnswer" required/>
+            </form>
+        </div>
+        <div class="spSubmit">Submit</div>
+    </div>
+    <div class="sp-modal" id="sp-modal5">
+        <span class="close">&times;</span>
+        <h2>Question 5</h2>
+        <p class="question">Who is the only boxer to win the heavyweight championship three times in separate decades?</p>
+        <ul class="answers">
+            <li>A) Muhammad Ali</li>
+            <li>B) Mike Tyson</li>
+            <li>C) Lennox Lewis</li>
+            <li>D) Evander Holyfield</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="sp-answer5"></label>
+                <input type="text" id="sp-answer5" class="spAnswer" name="spAnswer" required/> <!-- Answer input section -->
+            </form>
+        </div>
+        <div class="spSubmit">Submit</div>
+    </div>
+
+<!--    Movies topic questions-->
+    <div class="m-modal" id="m-modal1">
+        <span class="close">&times;</span>
+        <h2>Question 1</h2>
+        <p class="question">Who directed the movie "Jaws"?</p>
+        <ul class="answers">
+            <li>A) Steven Spielberg</li>
+            <li>B) George Lucas</li>
+            <li>C) Martin Scorsese</li>
+            <li>D) Francis Ford Coppola</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="m-answer1"></label>
+                <input type="text" id="m-answer1" class="mAnswer" name="mAnswer" required/>
+            </form>
+        </div>
+        <diV class="mSubmit">Submit</div>
+    </div>
+    <div class="m-modal" id="m-modal2">
+        <span class="close">&times;</span>
+        <h2>Question 2</h2>
+        <p class="question">Who played the lead role in "The Godfather"?</p>
+        <ul class="answers">
+            <li>A) Robert De Niro</li>
+            <li>B) Al Pacino</li>
+            <li>C) Marlon Brando</li>
+            <li>D) James Caan</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="m-answer2"></label>
+                <input type="text" id="m-answer2" class="mAnswer" name="mAnswer" required/>
+            </form>
+        </div>
+        <div class="mSubmit">Submit</div>
+    </div>
+    <div class="m-modal" id="m-modal3">
+        <span class="close">&times;</span>
+        <h2>Question 3</h2>
+        <p class="question">Which movie won the Best Picture Oscar in 2020?</p>
+        <ul class="answers">
+            <li>A) 1917</li>
+            <li>B) Parasite</li>
+            <li>C) Joker</li>
+            <li>D) Once Upon a Time in Hollywood</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="m-answer3"></label>
+                <input type="text" id="m-answer3" class="mAnswer" name="mAnswer" required/>
+            </form>
+        </div>
+        <div class="mSubmit">Submit</div>
+    </div>
+    <div class="m-modal" id="m-modal4">
+        <span class="close">&times;</span>
+        <h2>Question 4</h2>
+        <p class="question">Which movie is known for the line "Here's looking at you, kid"?</p>
+        <ul class="answers">
+            <li>A) Casablanca</li>
+            <li>B) Gone with the Wind</li>
+            <li>C) The Wizard of Oz</li>
+            <li>D) Singin' in the Rain</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="m-answer4"></label>
+                <input type="text" id="m-answer4" class="mAnswer" name="mAnswer" required/>
+            </form>
+        </div>
+        <div class="mSubmit">Submit</div>
+    </div>
+    <div class="m-modal" id="m-modal5">
+        <span class="close">&times;</span>
+        <h2>Question 5</h2>
+        <p class="question">Who directed the movie "The Shawshank Redemption"?</p>
+        <ul class="answers">
+            <li>A) Quentin Tarantino</li>
+            <li>B) David Fincher</li>
+            <li>C) Frank Darabont</li>
+            <li>D) Christopher Nolan</li>
+        </ul>
+        <div class="input-container">
+            <form>
+                <label for="m-answer5"></label>
+                <input type="text" id="m-answer5" class="mAnswer" name="mAnswer" required/> <!-- Answer input section -->
+            </form>
+        </div>
+        <div class="mSubmit">Submit</div>
+    </div>
+
+    <!-- Result display modal -->
+    <div id="result">
+        <div id="result-1">
+            <img class="atom" src="assets/atom.png" alt="Icon">
+        </div>
+        <h2 class="message"></h2>
+        <h2 class="scoreBasedMessage"></h2>
+        <button class="retake">Retake</button>
+        <button class="exit">Exit</button>
+    </div>
+
+<!-- Copyright section -->
+    <footer>Copyright 2023 Dennis Rotich</footer>
+    <script src="src/app.js"></script>
+</body>
+</html>
