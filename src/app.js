@@ -298,15 +298,12 @@ function closeResultModal() {
         topic.forEach(subject => {
             subject.classList.remove('topic-open')
         })
-        if (currentCard === scienceCard) {
-            scienceCard.addEventListener('click', sModalOpenStyling)
-        } else if (currentCard === historyCard) {
-            historyCard.addEventListener('click', hModalOpenStyling)
-        } else if (currentCard === sportsCard) {
-            sportsCard.addEventListener('click', spModalOpenStyling)
-        } else {
-            moviesCard.addEventListener('click', mModalOpenStyling)
-        }
+
+        // adding event listeners to the topic cards
+        scienceCard.addEventListener('click', sModalOpenStyling)
+        historyCard.addEventListener('click', hModalOpenStyling)
+        sportsCard.addEventListener('click', spModalOpenStyling)
+        moviesCard.addEventListener('click', mModalOpenStyling)
 
     })
 }
